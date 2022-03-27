@@ -3,7 +3,6 @@ int main() {
 	char calc;
 	int a, b;
 	while (1) {
-		//calc = 'Q';
 		printf("************\n");
 		printf("A----Add\n");
 		printf("S----Subsract\n");
@@ -11,34 +10,38 @@ int main() {
 		printf("D----Divide\n");
 		printf("Q----Quit\n");
 		printf("************\n");
-		printf("¿¬»êÀ» ¼±ÅÃÇÏ½Ã¿À : ");
-		scanf_s("%c", &calc, 1);
-		// rewind(stdin);
+		printf("ì—°ì‚°ì„ ì„ íƒí•˜ì‹œì˜¤ : ");
+		calc = getchar();
+		//	scanf_s("%c", &calc, 1);
 		if (calc == 'Q')
 			break;
 		else if (calc == 'A') {
-			printf("µÎ ¼ö¸¦ °ø¹éÀ¸·Î ºĞ¸®ÇÏ¿© ÀÔ·ÂÇÏ½Ã¿À : ");
+			printf("ë‘ ìˆ˜ë¥¼ ê³µë°±ìœ¼ë¡œ ë¶„ë¦¬í•˜ì—¬ ì…ë ¥í•˜ì‹œì˜¤ : ");
 			scanf_s("%d %d", &a, &b);
+			rewind(stdin);
 			printf("%d\n", a + b);
 		}
 		else if (calc == 'S') {
-			printf("µÎ ¼ö¸¦ °ø¹éÀ¸·Î ºĞ¸®ÇÏ¿© ÀÔ·ÂÇÏ½Ã¿À : ");
+			printf("ë‘ ìˆ˜ë¥¼ ê³µë°±ìœ¼ë¡œ ë¶„ë¦¬í•˜ì—¬ ì…ë ¥í•˜ì‹œì˜¤ : ");
 			scanf_s("%d %d", &a, &b);
+			rewind(stdin);
 			printf("%d\n", a - b);
 		}
 		else  if (calc == 'M') {
-			printf("µÎ ¼ö¸¦ °ø¹éÀ¸·Î ºĞ¸®ÇÏ¿© ÀÔ·ÂÇÏ½Ã¿À : ");
+			printf("ë‘ ìˆ˜ë¥¼ ê³µë°±ìœ¼ë¡œ ë¶„ë¦¬í•˜ì—¬ ì…ë ¥í•˜ì‹œì˜¤ : ");
 			scanf_s("%d %d", &a, &b);
+			rewind(stdin);
 			printf("%d\n", a * b);
 		}
 		else if (calc == 'D') {
-			printf("µÎ ¼ö¸¦ °ø¹éÀ¸·Î ºĞ¸®ÇÏ¿© ÀÔ·ÂÇÏ½Ã¿À : ");
+			printf("ë‘ ìˆ˜ë¥¼ ê³µë°±ìœ¼ë¡œ ë¶„ë¦¬í•˜ì—¬ ì…ë ¥í•˜ì‹œì˜¤ : ");
 			scanf_s("%d %d", &a, &b);
+			rewind(stdin);
 			printf("%d\n", a / b);
 		}
 		else {
 			printf("calc='%c'", calc);
-			printf("Áö¿øµÇÁö ¾Ê´Â ¿¬»êÀÚÀÔ´Ï´Ù.\n");
+			printf("ì§€ì›ë˜ì§€ ì•ŠëŠ” ì—°ì‚°ìì…ë‹ˆë‹¤.\n");
 		}
 	}
 	return 0;
